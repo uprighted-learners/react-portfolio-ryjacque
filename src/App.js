@@ -11,6 +11,7 @@ import './App.css';
 
 function App() {
   function handleLink(){document.getElementById("project-div").style.display = "block"; document.querySelector(".header").style.display = "block"; document.getElementById("project-header").style.display = "none"}
+
   return (
     <Router>
     <div className="page-wrapper">
@@ -32,8 +33,8 @@ function App() {
       </Routes>
     
 
-    <footer><Link to="/contact" onClick={()=>handleLink()}>Contact</Link>
-    <Link to="/resume" onClick={()=>handleLink()} >Resume</Link></footer>
+    <footer><Link to="/contact" onClick={()=>handleLink()}>CONTACT</Link>
+    <Link to="/resume" onClick={()=>handleLink()} >RESUME</Link></footer>
     </div>  
     <div id="project-div">
       <Link  to="/projects" onClick={()=>{document.getElementById("project-div").style.display = "none"; document.querySelector(".header").style.display = "none"; document.getElementById("project-header").style.display = "block"}}><h1>PROJECTS</h1></Link>

@@ -6,8 +6,8 @@ button{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 12vw;
+    margin-right: 12vw;
     margin-top: 1vh;
 }
 #about-wrapper{
@@ -16,23 +16,38 @@ button{
     justify-content: space-between;
     align-items: center;
 }
-img{
-    height: 30vh;
+#hobbie-one{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
 }
+#hobbie-two{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+}
+
 #hobbie-one img{
-    float: left;
+    width: 30vh;
 }
 #hobbie-two img{
-    float: right;
+    width: 30vh;
+    
 }
 #about-img{
     float: left;
+    height: 35vh;
+    margin: 2px;
 }
 #about-div{
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 12vw;
+    margin-right: 12vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+#about-info{
+    margin: 1vw;
+    text-align: left;
 }

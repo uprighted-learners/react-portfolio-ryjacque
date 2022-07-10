@@ -58,6 +58,23 @@ footer{
   margin-top: 3vh;
   border: 1px solid black;
 }
+a:link{
+  color: black;
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  color: #ff5e57;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:active{
+  color: black;
+  text-decoration: none;
+}
 
 
 
