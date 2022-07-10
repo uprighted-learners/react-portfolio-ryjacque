@@ -3,7 +3,12 @@ import './Projects.css'
 
 function Projects() {
   return (
-    <div>Projects</div>
+    <div id="projects-content">
+    <video controls="controls">
+  
+  <source src={require("./Jeopardy.mov")} />
+</video>
+</div>
   )
 }
 

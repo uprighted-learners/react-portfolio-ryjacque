@@ -1,0 +1,38 @@
+button{
+    margin-top: 1vh;
+}
+#hobbie-div{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 1vh;
+}
+#about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    height: 30vh;
+}
+#hobbie-one img{
+    float: left;
+}
+#hobbie-two img{
+    float: right;
+}
+#about-img{
+    float: left;
+}
+#about-div{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
