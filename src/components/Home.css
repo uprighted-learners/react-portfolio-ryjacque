@@ -1,0 +1,14 @@
+#profile-pic {
+  height: 50vh;
+  float: left;
+  margin-left: 5vw;
+}
+#home-p {
+  width: 50vw;
+}
+#home-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
