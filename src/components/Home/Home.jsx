@@ -8,8 +8,7 @@ function Home(props) {
     <div id="home-div">
       <img id="profile-pic" src={profileImage} alt="profile image of Ryan Collins" />
       <p id="home-p">
-        A passionate developer looking to make a difference and/or some bread in
-        this crazy, crazy world.
+        Full-stack software developer seeking engagement and excitement in this crazy tech world.
       </p>
     </div>
   );

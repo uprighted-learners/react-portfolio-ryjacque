@@ -13,7 +13,7 @@ function Resume(props) {
         target="_blank"
         download
       >
-        Click to download
+        Download Resume
       </a>
     </div>
   );
