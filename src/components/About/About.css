@@ -1,8 +1,14 @@
+
+.no-display{
+  display: none;
+}
+.yes-display{
+  display: flex
+}
 button {
   margin-top: 1vh;
 }
 #hobbie-div {
-  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -16,23 +22,17 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-#hobbie-one {
-  display: flex;
-  align-items: space-between;
-  justify-content: center;
-}
-#hobbie-two {
+.hobbie {
   display: flex;
   align-items: space-between;
   justify-content: center;
 }
 
-#hobbie-one img {
+
+.hobbie img {
   width: 30vh;
 }
-#hobbie-two img {
-  width: 30vh;
-}
+
 #about-img {
   float: left;
   height: 35vh;
@@ -41,7 +41,6 @@ button {
 #about-div {
   margin-left: 12vw;
   margin-right: 12vw;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;

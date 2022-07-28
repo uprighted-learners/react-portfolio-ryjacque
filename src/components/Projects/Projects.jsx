@@ -1,7 +1,12 @@
 import React from "react";
 import "./Projects.css";
+import zorkingtonVideo from './assets/zorkington.mov'
+import joepardyVideo from "./assets/Jeopardy.mov"
+import guessNumberVideo from "./assets/guess-the-number.mov"
+import reactImage from "./assets/react-portfolio.png"
 
-function Projects() {
+function Projects(props) {
+  props.setIsProj(true)
   return (
     <div id="projects-content">
       <figure>
@@ -15,7 +20,7 @@ function Projects() {
         </figcaption>
         <video controls="controls">
           <source
-            src={require("./Jeopardy.mov")}
+            src={joepardyVideo}
             title="video demonstration of Jeopardy Project"
           />
         </video>
@@ -31,7 +36,7 @@ function Projects() {
         </figcaption>
         <video controls="controls">
           <source
-            src={require("./zorkington.mov")}
+            src={zorkingtonVideo}
             title="video demonstration of Zorkington project"
           />
         </video>
@@ -49,7 +54,7 @@ function Projects() {
       <figure>
         <video controls="controls">
           <source
-            src={require("./guess-the-number.mov")}
+            src={guessNumberVideo}
             title="video demonstration of Guess-the-Number project"
           />
         </video>
@@ -65,7 +70,7 @@ function Projects() {
         </figcaption>
         <img
           id="portfolio-img"
-          src={require("./images/react-portfolio.png")}
+          src={reactImage}
           alt="Screenshot of React Portfolio project"
         />
       </figure>

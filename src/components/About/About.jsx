@@ -1,41 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
+import breadImage from "./assets/bread.png";
+import farmImage from "./assets/farm.jpeg";
+import duneImage from "./assets/michigan.png";
 
-function About() {
-  let isAbout = true;
-  const handleClick = () => {
-    isAbout = !isAbout;
-    console.log(isAbout);
-    handleState();
-  };
-  function handleState() {
-    let hobbieDiv = document.getElementById("hobbie-div");
-    let aboutDiv = document.getElementById("about-div");
-    let toggleButton = document.getElementById("toggle-button");
-    if (isAbout) {
-      hobbieDiv.style.display = "none";
-      aboutDiv.style.display = "flex";
-      toggleButton.textContent = "Interests";
-    } else {
-      hobbieDiv.style.display = "flex";
-      aboutDiv.style.display = "none";
-      toggleButton.textContent = "About Ryan";
-    }
+function About(props) {
+  props.setIsProj(false)
+  const [hobbieDisplayClass, setHobbieDisplayClass] = useState("no-display");
+  const [aboutDisplayClass, setAboutDisplayClass] = useState("yes-display");
+  const [toggleText, setToggleText] = useState("Interests");
+  const [isAbout, setIsAbout] = useState(true);
+useEffect(()=>
+{
+  if (isAbout) {
+    setHobbieDisplayClass("no-display");
+    setAboutDisplayClass("yes-display");
+    setToggleText("Interests");
+  } else {
+    setHobbieDisplayClass("yes-display");
+    setAboutDisplayClass("no-display");
+    setToggleText("About");
   }
+},
+[isAbout])
+  
 
   return (
     <div id="about-wrapper">
-      <button id="toggle-button" onClick={() => handleClick()}>
-        Interests
+      <button id="toggle-button" onClick={() => {
+    isAbout ? setIsAbout(false) : setIsAbout(true);
+  }}>
+        {toggleText}
       </button>
       {/* toggle between "About" and "Interests" */}
-      <div id="hobbie-div">
+      <div id="hobbie-div" className={hobbieDisplayClass}>
         <h2>Interests</h2>
-        <div id="hobbie-one">
-          <img
-            src={require("./images/bread.png")}
-            alt="image of two loaves of bread"
-          />
+        <div className="hobbie">
+          <img src={breadImage} alt="two loaves of bread" />
           <p>
             Ryan is an amateur baker of sourdough bread. Though she has chosen
             to pursue another career, she is still baking under the alias
@@ -44,7 +45,7 @@ function About() {
             rhemium, and........
           </p>
         </div>
-        <div id="hobbie-two">
+        <div className="hobbie">
           <p>
             Before venturing into software development, Ryan made a her living
             farming in Vermont. She still gardens, and works as a "ringer" at
@@ -52,20 +53,17 @@ function About() {
             crew. Nickel, neodymium, neptunium germanium and iron, americium,
             ruthenium, uranium...
           </p>
-          <img
-            src={require("./images/farm.jpeg")}
-            alt="image of Ryan Collins harvesting radishes"
-          />
+          <img src={farmImage} alt="radish harvest" />
         </div>
       </div>
 
-      <div id="about-div">
+      <div id="about-div" className={aboutDisplayClass}>
         <h2>About Ryan</h2>
         <div>
           <img
             id="about-img"
-            src={require("./images/michigan.png")}
-            alt="image of Sleeping Bear Dunes near Traverse City, MI"
+            src={duneImage}
+            alt="Sleeping Bear Dunes near Traverse City, MI"
           />
           <p id="about-info">
             Ryan grew up on Lake Michigan near the Sleeping Bear Dunes. She
